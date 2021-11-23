@@ -1,0 +1,117 @@
+e.Return all the palindromes in an array
+
+     Anonymous Function
+
+                var arr = [1,2,2,1];
+                var arr1 = [1,2,3,1];
+                function palindromeArray (arr, start = 0, end = arr.length - 1){
+                                      //if array has only element
+                                      if(start >= end){
+                                             return true;
+                                      }
+    
+                                     //if start is equal to end
+                                     if(arr[start] === arr[end]){
+                                                //call the same function
+                                                 return palindromeArray(arr, start + 1, end - 1);
+                                     }else{
+                                              //else not palindrome
+                                              return false;
+                                      }
+                 }
+                console.log(palindromeArray(arr));
+
+     IIFE(Immediately Invoked Function EXpression)
+
+                 (function (arr, start = 0, end = arr.length - 1){
+                                      //if array has only element
+                                      if(start >= end){
+                                             return true;
+                                      }
+    
+                                     //if start is equal to end
+                                     if(arr[start] === arr[end]){
+                                                //call the same function
+                                                 return (arr, start++, end--);
+                                     }else{
+                                              //else not palindrome
+                                              return false;
+                                      }
+                 }) (arr);
+                
+     Arrow Function
+
+                 ( (arr, start = 0, end = arr.length - 1) => {
+                                      //if array has only element
+                                      if(start >= end){
+                                             return true;
+                                      }
+    
+                                     //if start is equal to end
+                                     if(arr[start] === arr[end]){
+                                                //call the same function
+                                                 return (arr, start++, end--);
+                                     }else{
+                                              //else not palindrome
+                                              return false;
+                                      }
+                 }) 
+                 console.log(arr);
+
+
+f.Return median of two sorted arrays of same size
+
+     Anonymous Function
+                
+             var arr1 = [1,4,7,9];
+             var arr2 = [2,5,8,3];
+
+             function medianof2arr(arr1, arr2){
+                       var concat = arr1.concat(arr2);
+                       concat = concat.sort(function(a,b){ return a-b });
+                       console.log(concat);
+                       var length = concat.length;
+                       if(length % 2 == 1){
+                                 console.log(concat[(length/2) - .5]);
+                                 return concat[(length/2) - .5];
+                       }else{
+                                 console.log((concat[length/2] + concat[(length/2) - 1])/2 - .5);
+                                 return (concat[length/2] + concat[(length/2) - 1])/2 - .5;
+                       }
+              }
+            medianof2arr(arr1,arr2);
+
+     IIFE(Immediately Invoked Function EXpression)
+             
+              (function (arr1, arr2){
+                       var concat = arr1.concat(arr2);
+                       concat = concat.sort(function(a,b){ return a-b });
+                       console.log(concat);
+                       var length = concat.length;
+                       if(length % 2 == 1){
+                                 console.log(concat[(length/2) - .5]);
+                                 return concat[(length/2) - .5];
+                       }else{
+                                 console.log((concat[length/2] + concat[(length/2) - 1])/2 - .5);
+                                 return (concat[length/2] + concat[(length/2) - 1])/2 - .5;
+                       }
+              })(arr1,arr2);
+
+     Arrow Function
+              
+               ( (arr1, arr2) => {
+                       var concat = arr1.concat(arr2);
+                       concat = concat.sort(function(a,b){ return a-b });
+                       console.log(concat);
+                       var length = concat.length;
+                       if(length % 2 == 1){
+                                 console.log(concat[(length/2) - .5]);
+                                 return concat[(length/2) - .5];
+                       }else{
+                                 console.log((concat[length/2] + concat[(length/2) - 1])/2 - .5);
+                                 return (concat[length/2] + concat[(length/2) - 1])/2 - .5;
+                       }
+              }(arr1,arr2);
+
+            
+            

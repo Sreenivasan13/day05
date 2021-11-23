@@ -1,0 +1,78 @@
+a.Print odd numbers in an array
+
+     Anonymous Function
+
+          var arr = [1,2,3,4,5];
+          var arr1 = [];
+          function oddNumbers(arr){
+              for(var i = 0; i < arr.length; i++){
+                   if(arr[i] %2 !== 0){
+                           arr1.push(arr[i]);
+            
+                    }
+          }
+          console.log(arr1);
+         }
+          oddNumbers(arr);
+
+
+     IIFE(Immediately Invoked Function EXpression)
+             (function(arr){
+                for(var i = 0; i < arr.length; i++){
+                   if(arr[i] %2 !== 0){
+                           arr1.push(arr[i]);
+            
+                    }
+                }
+             console.log(arr1);
+          })(arr);
+
+     Arrow Function
+
+              ((arr) => {
+                         for(var i = 0; i < arr.length; i++){
+                                  if(arr[i] %2 !== 0){
+                                         arr1.push(arr[i]);
+            
+                                   }
+                         }
+                            console.log(arr1);
+                })(arr);
+
+b.Convert all the strings to title caps in a string array
+
+     Anonymous Function
+         function titleCase(string) {
+                 var sentence = string.toLowerCase().split(" ");
+                 for(var i = 0; i< sentence.length; i++){
+                            sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+                 }
+               document.write(sentence.join(" "));
+               return sentence;
+         }
+         titleCase("tutorix is one of best e-platforms");
+
+
+     IIFE(Immediately Invoked Function EXpression)
+
+             (function(string){
+                      var sentence = string.toLowerCase().split(" ");
+                      for(var i = 0; i< sentence.length; i++){
+                                sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+                       }
+                    document.write(sentence.join(" "));
+                    return sentence;
+  
+              })("tutorix is one of best e-platforms");
+
+     Arrow Function
+
+              ((string) => {
+                      var sentence = string.toLowerCase().split(" ");
+                      for(var i = 0; i< sentence.length; i++){
+                                   sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+                       }
+                      document.write(sentence.join(" "));
+                      return sentence;
+   
+                })("tutorix is one of best e-platforms");

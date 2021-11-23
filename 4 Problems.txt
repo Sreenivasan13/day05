@@ -1,0 +1,90 @@
+c.Sum of all numbers in an array
+
+     Anonymous Function
+
+         var arr = [2, 2, 2, 2,2];
+         var sum = 0;
+         var result = [];
+         function sumNumbers(arr) {
+                 for(var i = 0; i < arr.length; i++){
+                           sum += arr[i];
+            
+                  }
+                  result.push(sum);
+                  console.log(result)
+         }
+         sumNumbers(arr);
+
+     IIFE(Immediately Invoked Function EXpression)
+
+           (function(arr){
+                      for(var i = 0; i < arr.length; i++){
+                                    sum += arr[i];
+            
+                       }
+                       result.push(sum);
+                       console.log(result);
+  
+            })(arr);
+
+     Arrow Function
+     
+         ((arr) => {
+                 for(var i = 0; i < arr.length; i++){
+                           sum += arr[i];
+            
+                 }
+               result.push(sum);
+               console.log(result);
+          })(arr);
+
+
+d.Return all the prime numbers in an array
+
+     Anonymous Function
+
+            var arr = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+ 
+            function primeNumbers(arr){
+                          arr = arr.filter((number) => {
+                                    for (var i = 2; i <= Math.sqrt(number); i++) {
+                                             if (number % i === 0){
+                                                        return false;
+                                             }
+                 
+                                    }
+                              return true;
+                          });
+                console.log(arr);
+            }
+            primeNumbers(arr);
+
+     IIFE(Immediately Invoked Function EXpression)
+
+                 (function(arr){
+                             arr = arr.filter((number) => {
+                                   for (var i = 2; i <= Math.sqrt(number); i++) {
+                                              if (number % i === 0){
+                                                       return false;
+                                                }
+                 
+                                    }
+                                     return true;
+                              });
+                             console.log(arr);
+                   })(arr);
+
+     Arrow Function
+
+                  ((arr) => {
+                             arr = arr.filter((number) => {
+                                   for (var i = 2; i <= Math.sqrt(number); i++) {
+                                              if (number % i === 0){
+                                                       return false;
+                                                }
+                 
+                                    }
+                                     return true;
+                              });
+                             console.log(arr);
+                   })(arr);

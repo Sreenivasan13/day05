@@ -1,0 +1,88 @@
+g.Remove duplicates from an array
+            
+     Anonymous Function
+
+              const array = [1, 2, 3, 2, 3];
+              function getUnique(arr){
+    
+                     let uniqueArr = [];
+    
+                     for(let i of arr) {
+                             if(uniqueArr.indexOf(i) === -1) {
+                                       uniqueArr.push(i);
+                             }
+                      }
+                     console.log(uniqueArr);
+               }
+              getUnique(array);
+
+     IIFE(Immediately Invoked Function EXpression)
+                
+              (function (arr){
+    
+                     let uniqueArr = [];
+    
+                     for(let i of arr) {
+                             if(uniqueArr.indexOf(i) === -1) {
+                                       uniqueArr.push(i);
+                             }
+                      }
+                     console.log(uniqueArr);
+               })(array);
+
+     Arrow Function
+
+               ((arr) => {
+    
+                     let uniqueArr = [];
+    
+                     for(let i of arr) {
+                             if(uniqueArr.indexOf(i) === -1) {
+                                       uniqueArr.push(i);
+                             }
+                      }
+                     console.log(uniqueArr);
+               })(array);
+
+h.Rotate an array by k times
+
+     Anonymous Function
+
+                 var nums = [1,2,3,4,5];
+                 var k = 2;
+                 function rotateArrayk(nums, k) {
+
+                                for (let i = 1; i <= k; i++) {
+                                           let last = nums.pop();
+                                           nums.unshift(last);
+       
+                                }
+                                console.log(nums);
+                                // return nums;
+                  }
+                  rotateArrayk (nums, k);
+     IIFE(Immediately Invoked Function EXpression)
+ 
+                  (function (nums, k) {
+
+                                for (let i = 1; i <= k; i++) {
+                                           let last = nums.pop();
+                                           nums.unshift(last);
+       
+                                }
+                                console.log(nums);
+                                // return nums;
+                  })(nums, k);
+                  
+     Arrow Function
+
+                  ((nums, k) => {
+
+                                for (let i = 1; i <= k; i++) {
+                                           let last = nums.pop();
+                                           nums.unshift(last);
+       
+                                }
+                                console.log(nums);
+                                // return nums;
+                  })(nums, k);
